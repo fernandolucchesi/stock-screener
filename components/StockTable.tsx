@@ -48,6 +48,7 @@ const StockTable = () => {
               <TableRow
                 onClick={() => setActiveStock(stock.symbol)}
                 key={stock.symbol}
+                className="cursor-pointer"
               >
                 <TableCell>{stock.symbol}</TableCell>
                 <TableCell className="max-w-52">{stock.name}</TableCell>

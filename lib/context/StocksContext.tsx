@@ -29,7 +29,7 @@ export const StocksProvider: React.FC<StocksProviderProps> = ({ children }) => {
   const [activeStock, setActiveStock] = useState<string>()
 
   useEffect(() => {
-    stocks.loading && setActiveStock(undefined)
+    if (stocks.loading) setActiveStock(undefined)
   }, [stocks.loading])
 
   return (
